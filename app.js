@@ -9,11 +9,10 @@ function censor() {
         if (arg.length === 2) {
             listStringPairs.push([arg[0],arg[1]]);
         } else {
-            let res = arg[0];
             for (let stringPairs of listStringPairs) {
-                res = res.replace(stringPairs[0], stringPairs[1]);
+                arg[0] = arg[0].replace(stringPairs[0], stringPairs[1]);
             }
-            return res
+            return arg[0]
         }  
     }
 
